@@ -1,0 +1,68 @@
+<odoo>
+    <record id="view_amadeus_example_form" model="ir.ui.view">
+        <field name="name">amadeus.example.form</field>
+        <field name="model">amadeus.example</field>
+        <field name="arch" type="xml">
+            <form string="Amadeus Example">
+                <header>
+                    <button string="Get Flights" type="object" name="get_flights" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="location_id" string="Location ID"/>
+                        <field name="location_type" string="Location Type"/>
+                        <field name="location_subtype" string="Location Subtype"/>
+                        <field name="name" string="Location Name"/>
+                        <field name="latitude" string="Latitude"/>
+                        <field name="longitude" string="Longitude"/>
+                        <field name="lgbtq" string="LGBTQ Safety Score"/>
+                        <field name="medical" string="Longitude"/>
+                        <field name="overall" string="Overall Safety Score"/>
+                        <field name="physical_harm" string="Physical Harm Safety Score"/>
+                        <field name="political_freedom" string="Political Freedom Safety Score"/>
+                        <field name="theft" string="Theft Safety Score"/>
+                        <field name="women" string="Women Safety Score"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_amadeus_example_tree" model="ir.ui.view">
+        <field name="name">amadeus.example.tree</field>
+        <field name="model">amadeus.example</field>
+        <field name="arch" type="xml">
+            <tree string="Amadeus Example">
+                <header>
+                    <button string="Get Flights" type="object" name="get_flights" class="btn-primary"/>
+                </header>
+                <field name="location_id" string="Location ID"/>
+                <field name="location_type" string="Location Type"/>
+                <field name="location_subtype" string="Location Subtype"/>
+                <field name="name" string="Location Name"/>
+                <field name="latitude" string="Latitude"/>
+                <field name="longitude" string="Longitude"/>
+                <field name="lgbtq" string="LGBTQ Safety Score"/>
+                <field name="medical" string="Longitude"/>
+                <field name="overall" string="Overall Safety Score"/>
+                <field name="physical_harm" string="Physical Harm Safety Score"/>
+                <field name="political_freedom" string="Political Freedom Safety Score"/>
+                <field name="theft" string="Theft Safety Score"/>
+                <field name="women" string="Women Safety Score"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record id="action_amadeus_example" model="ir.actions.act_window">
+        <field name="name">Amadeus Example</field>
+        <field name="res_model">amadeus.example</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_amadeus_example"
+              name="Amadeus Example"
+              action="action_amadeus_example"
+              parent="base.menu_administration"/>
+</odoo>
